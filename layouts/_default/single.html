@@ -4,7 +4,7 @@
 
 {{ define "main" }}
 {{ $section := .Site.GetPage "section" .Section }}
-<article>
+<article class="post" {{- if .Param "autonumbering" }} autonumbering {{- end }}>
 	<section class="mx-auto content">
 		<div class="c-rich-text">
 			{{- .Content -}}
